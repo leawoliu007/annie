@@ -3,8 +3,8 @@ package streamtape
 import (
 	"testing"
 
-	"github.com/iawia002/annie/extractors/types"
-	"github.com/iawia002/annie/test"
+	"github.com/leawoliu007/annie/extractors/types"
+	"github.com/leawoliu007/annie/test"
 )
 
 func TestStreamtape(t *testing.T) {
