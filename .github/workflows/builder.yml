@@ -75,7 +75,6 @@ jobs:
 
     - name: Get dependencies
       run: |
-        go mod init
         go get -v -t -d ./...
 
     - name: Build binary
