@@ -365,8 +365,8 @@ func bilibiliDownload(options bilibiliOptions, extractOption types.Options) *typ
 
 
 	numtitle := len(title)
-	if numtitle > 20 {
-		numtitle = 20
+	if numtitle > 128 {
+		numtitle = 128
 	}
 
 	return &types.Data{
