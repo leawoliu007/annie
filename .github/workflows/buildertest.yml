@@ -7,14 +7,14 @@ on:
       - "**/*.go"
       - "go.mod"
       - "go.sum"
-      - ".github/workflows/Buildertest.yml"
+      - ".github/workflows/buildertest.yml"
   pull_request:
     branches: "*"
     paths:
       - "**/*.go"
       - "go.mod"
       - "go.sum"
-      - ".github/workflows/Buildertest.yml"
+      - ".github/workflows/buildertest.yml"
   workflow_dispatch:
 
 env:
@@ -117,7 +117,7 @@ jobs:
         go get -v -t -d ./...
 
     - name: Build binary
-      id: Buildertest
+      id: buildertest
       run: |
         ARGS="${GOOS}-${GOARCH}"
         if [[ -n "${GOARM}" ]]; then
@@ -135,6 +135,6 @@ jobs:
     - name: Upload binary artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ steps.Buildertest.outputs.filename }}
+        name: ${{ steps.buildertest.outputs.filename }}
         path: ./bin/${{ env.PRODUCT }}*
         if-no-files-found: error
