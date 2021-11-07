@@ -365,7 +365,7 @@ func bilibiliDownload(options bilibiliOptions, extractOption types.Options) *typ
 
 	return &types.Data{
 		Site:    "哔哩哔哩 bilibili.com",
-		Title:   title,
+		Title:   title[1:40],    //incase the title is too long
 		Type:    types.DataTypeVideo,
 		Streams: streams,
 		Caption: &types.Part{
