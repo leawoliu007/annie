@@ -27,7 +27,7 @@ jobs:
     name: Build
     strategy:
       matrix:
-        os: [ linux, freebsd, openbsd, dragonfly, windows, darwin ]
+        os: [ linux ]
         arch: [ amd64, 386 ]
         include:
           - os: linux
