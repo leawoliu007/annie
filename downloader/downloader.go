@@ -500,9 +500,7 @@ func (downloader *Downloader) aria2(title string, stream *types.Stream) error {
 	}
 	var inputs Aria2Input
 	inputs.Header = append(inputs.Header, "Referer: "+downloader.option.Refer)
-	if downloader.option.Refer == "" {
-		inputs.Header = append(inputs.Header, "Referer: https://www.bilibili.com/")
-	}
+	inputs.Header = append(inputs.Header, "Referer: https://www.bilibili.com/")
 	for i := range urls {
 		rpcData.Params[1] = urls[i : i+1]
 		inputs.Out = fmt.Sprintf("%s[%d].%s", title, i, stream.Parts[0].Ext)
