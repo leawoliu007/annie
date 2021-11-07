@@ -31,45 +31,6 @@ jobs:
         arch: [ amd64, 386 ]
         include:
           - os: linux
-            arch: arm
-            arm: 5
-          - os: linux
-            arch: arm
-            arm: 6
-          - os: linux
-            arch: arm
-            arm: 7
-          - os: linux
-            arch: arm64
-          - os: linux
-            arch: mips
-            mips: softfloat
-          - os: linux
-            arch: mips
-            mips: hardfloat
-          - os: linux
-            arch: mipsle
-            mipsle: softfloat
-          - os: linux
-            arch: mipsle
-            mipsle: hardfloat
-          - os: linux
-            arch: mips64
-          - os: linux
-            arch: mips64le
-          - os: linux
-            arch: ppc64
-          - os: linux
-            arch: ppc64le
-          - os: linux
-            arch: s390x
-          - os: windows
-            arch: arm
-          - os: android
-            arch: arm64
-          - os: darwin
-            arch: arm64
-          - os: freebsd
             arch: arm64
         exclude:
           - os: darwin
