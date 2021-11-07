@@ -20,7 +20,7 @@ on:
 env:
   PRODUCT: annie
   CGO_ENABLED: 0
-  GO111MODULE: on
+  GO111MODULE: off
 
 jobs:
   build:
