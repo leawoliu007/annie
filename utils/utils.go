@@ -17,7 +17,7 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/iawia002/annie/request"
+	"github.com/leawoliu007/annie/request"
 )
 
 // GetStringFromJSON get the string value from json path

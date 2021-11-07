@@ -17,9 +17,9 @@ import (
 
 	"github.com/cheggaaa/pb/v3"
 
-	"github.com/iawia002/annie/extractors/types"
-	"github.com/iawia002/annie/request"
-	"github.com/iawia002/annie/utils"
+	"github.com/leawoliu007/annie/extractors/types"
+	"github.com/leawoliu007/annie/request"
+	"github.com/leawoliu007/annie/utils"
 )
 
 // Options defines options used in downloading.
