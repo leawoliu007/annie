@@ -15,44 +15,13 @@ import (
 var extractorMap map[string]types.Extractor
 
 func init() {
-	douyinExtractor := douyin.New()
-	youtubeExtractor := youtube.New()
 	stExtractor := streamtape.New()
 
 	extractorMap = map[string]types.Extractor{
 		"": universal.New(), // universal extractor
 
-		"douyin":     douyinExtractor,
-		"iesdouyin":  douyinExtractor,
 		"bilibili":   bilibili.New(),
-		"bcy":        bcy.New(),
-		"pixivision": pixivision.New(),
-		"youku":      youku.New(),
-		"youtube":    youtubeExtractor,
-		"youtu":      youtubeExtractor, // youtu.be
-		"iqiyi":      iqiyi.New(iqiyi.SiteTypeIqiyi),
-		"iq":         iqiyi.New(iqiyi.SiteTypeIQ),
-		"mgtv":       mgtv.New(),
-		"tangdou":    tangdou.New(),
-		"tumblr":     tumblr.New(),
-		"vimeo":      vimeo.New(),
-		"facebook":   facebook.New(),
-		"douyu":      douyu.New(),
-		"miaopai":    miaopai.New(),
-		"163":        netease.New(),
-		"weibo":      weibo.New(),
-		"instagram":  instagram.New(),
-		"twitter":    twitter.New(),
-		"qq":         qq.New(),
-		"yinyuetai":  yinyuetai.New(),
-		"geekbang":   geekbang.New(),
-		"pornhub":    pornhub.New(),
-		"xvideos":    xvideos.New(),
 		"udn":        udn.New(),
-		"tiktok":     tiktok.New(),
-		"haokan":     haokan.New(),
-		"acfun":      acfun.New(),
-		"eporner":    eporner.New(),
 		"streamtape": stExtractor,
 		"streamta":   stExtractor, // streamta.pe
 	}
