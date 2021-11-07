@@ -363,9 +363,15 @@ func bilibiliDownload(options bilibiliOptions, extractOption types.Options) *typ
 		}
 	}
 
+
+	numtitle := len(title)
+	if numtitle > 20 {
+		numtitle = 20
+	}
+
 	return &types.Data{
 		Site:    "哔哩哔哩 bilibili.com",
-		Title:   title[1:40],    //incase the title is too long
+		Title:   title[1:numtitle],    //incase the title is too long
 		Type:    types.DataTypeVideo,
 		Streams: streams,
 		Caption: &types.Part{
